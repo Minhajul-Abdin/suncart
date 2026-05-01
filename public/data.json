@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses designed to reduce glare and protect your eyes from harmful sun rays. Perfect for beach trips, outdoor sports, and daily summer wear, offering both comfort and modern fashion appeal.",
+    "image": "https://source.unsplash.com/800x800/?sunglasses,summer",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "Dermasafe",
+    "price": 12,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Broad-spectrum SPF 50 sunscreen lotion that provides strong protection against UVA and UVB rays. Lightweight and non-greasy formula, ideal for long summer days at the beach, pool, or outdoor activities.",
+    "image": "https://source.unsplash.com/800x800/?sunscreen,spf",
+    "category": "Skincare"
+  },
+  {
+    "id": 3,
+    "name": "Beach Umbrella",
+    "brand": "ShadePro",
+    "price": 30,
+    "rating": 4.5,
+    "stock": 8,
+    "description": "Durable and wind-resistant beach umbrella designed to provide maximum shade during hot summer days. Easy to set up and lightweight for carrying, making it perfect for picnics, beaches, and outdoor events.",
+    "image": "https://source.unsplash.com/800x800/?beach,umbrella",
+    "category": "Outdoor"
+  },
+  {
+    "id": 4,
+    "name": "Insulated Water Bottle",
+    "brand": "HydroCool",
+    "price": 18,
+    "rating": 4.9,
+    "stock": 40,
+    "description": "Premium insulated water bottle that keeps your drinks cold for hours during summer heat. Made from high-quality stainless steel, ideal for travel, gym sessions, hiking, and everyday hydration.",
+    "image": "https://source.unsplash.com/800x800/?waterbottle,summer",
+    "category": "Fitness"
+  },
+  {
+    "id": 5,
+    "name": "Portable Mini Fan",
+    "brand": "BreezeTech",
+    "price": 20,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Compact and rechargeable portable mini fan designed to keep you cool during hot summer days. Lightweight and easy to carry, perfect for travel, office use, or outdoor activities.",
+    "image": "https://source.unsplash.com/800x800/?portablefan,fan",
+    "category": "Electronics"
+  },
+  {
+    "id": 6,
+    "name": "Comfort Flip Flops",
+    "brand": "SummerStep",
+    "price": 10,
+    "rating": 4.4,
+    "stock": 50,
+    "description": "Lightweight and comfortable flip flops designed for casual summer wear. Made with soft, durable materials that provide excellent grip and comfort for beach walks, poolside lounging, and daily use.",
+    "image": "https://source.unsplash.com/800x800/?flipflops,sandals",
+    "category": "Footwear"
+  },
+  {
+    "id": 7,
+    "name": "Quick-Dry Beach Towel",
+    "brand": "AquaSoft",
+    "price": 14,
+    "rating": 4.7,
+    "stock": 22,
+    "description": "Highly absorbent and quick-drying beach towel made from soft microfiber material. Ideal for swimming, sunbathing, and travel, offering lightweight convenience and fast drying performance.",
+    "image": "https://source.unsplash.com/800x800/?beachtowel,towel",
+    "category": "Beach Essentials"
+  },
+  {
+    "id": 8,
+    "name": "Portable Ice Cooler Box",
+    "brand": "ChillMate",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 12,
+    "description": "Spacious portable ice cooler box designed to keep food and drinks cold for extended periods during summer outings. Perfect for picnics, road trips, camping, and beach parties with excellent insulation performance.",
+    "image": "https://source.unsplash.com/800x800/?coolerbox,icebox",
+    "category": "Outdoor"
+  }
+]
