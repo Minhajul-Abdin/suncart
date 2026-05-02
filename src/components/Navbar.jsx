@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import logo from "../../public/logo.png";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -9,15 +10,15 @@ const Navbar = () => {
         <div className="flex gap-2 items-center">
           <div className="w-8 h-8">
             <Image
-              src={"/logo.png"}
+              src={logo}
               alt="logo"
               loading="eager"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
               className="object-cover h-auto w-auto"
             />
           </div>
-          <h3 className="font-black text-lg">pixgen.</h3>
+          <h3 className="font-black text-lg">SunCart</h3>
         </div>
 
         <ul className="flex items-center gap-5 text-sm">

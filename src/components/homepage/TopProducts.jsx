@@ -10,10 +10,10 @@ const TopProducts = async () => {
   console.log(showCaseProducts);
 
   return (
-    <div className="container mx-auto">
+    <div className="container py-20 mx-auto">
       <h1 className="py-10 text-3xl font-bold">Popular Products</h1>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5">
         {showCaseProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
