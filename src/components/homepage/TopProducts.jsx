@@ -11,7 +11,7 @@ const TopProducts = async () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="py-10 text-3xl font-bold">Products</h1>
+      <h1 className="py-10 text-3xl font-bold">Popular Products</h1>
 
       <div className="grid grid-cols-3 gap-3">
         {showCaseProducts.map((product) => (
