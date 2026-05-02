@@ -10,6 +10,7 @@ const Footer = () => {
       <div className="absolute inset-0 -z-10 bg-white dark:bg-[#0a0a0b]" />
 
       {/* Subtle Gradient Glow */}
+      {/*idk*/}
       <div
         className="absolute inset-0 -z-10 bg-linear-to-tr 
         from-purple-500/5 via-transparent to-blue-500/5 
