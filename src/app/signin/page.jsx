@@ -9,8 +9,11 @@ import {
   Form,
   Input,
   Label,
+  Separator,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
+import { GrGoogle } from "react-icons/gr";
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -26,6 +29,12 @@ export default function SignInPage() {
     });
     console.log({data, error});
   };
+
+  const handleGoogleSignIn = async() => {
+    await authClient.signIn.social({
+        provider: 'google',
+    })
+  }
   return (
     <Card className="shadow rounded-2xl mx-auto w-125 py-9 mt-5">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
@@ -75,6 +84,13 @@ export default function SignInPage() {
           </Button>
         </div>
       </Form>
+      <br/>
+      <br/>
+      <Separator></Separator>
+      <p className="text-center">Or</p>
+      <Button onClick={handleGoogleSignIn} className="w-full"><GrGoogle /> Sign In with Google</Button>    
+      <p className="text-center">Dont have an account?</p>
+    <Link href={'/signup'}><Button className="w-full">Sign Up</Button></Link>
     </Card>
   );
 }

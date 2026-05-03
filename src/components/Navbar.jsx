@@ -2,11 +2,19 @@
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
+import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
+  const userData = authClient.useSession();
+  const user = userData.data?.user;
+
+  const haldleLogOut = async() => {
+    await authClient.signOut();
+  };
+  console.log(user);
   return (
-<div className="navbar bg-base-100 shadow-sm">
+<div className="navbar md:px-10 bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -34,9 +42,24 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-2">
-    <Link href={"/signup"}><Button className="btn rounded-full">Sign Up</Button></Link>
-    <Link href={"/signin"}><Button className="btn rounded-full">Sign In</Button></Link>
-  </div>
+    {!user && (
+      <>
+        <Link href={"/signup"}><Button className="btn rounded-full">Sign Up</Button></Link>
+        <Link href={"/signin"}><Button className="btn rounded-full">Sign In</Button></Link>
+      </>
+    )}
+    
+    {
+      user && (<div className="flex gap-3">
+        <Avatar>
+        <Avatar.Image alt="John Doe" src={user?.image} referrerPolicy="no-referrer" />
+        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+      </Avatar>
+      <Button onClick={haldleLogOut} variant="danger" >Log Out</Button>
+      </div>)
+    }
+    
+    </div>
 </div>
   );
 };

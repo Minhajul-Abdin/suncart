@@ -9,11 +9,19 @@ import {
   Form,
   Input,
   Label,
+  Separator,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
 export default function SignUpPage() {
+    const handleGoogleSignIn = async() => {
+        await authClient.signIn.social({
+            provider: 'google',
+        })
+      }
 
   const router = useRouter();
 
@@ -40,7 +48,7 @@ export default function SignUpPage() {
   };
   return (
     <Card className="shadow rounded-2xl mx-auto w-125 py-9 mt-5">
-      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+      <h1 className="text-center text-2xl font-bold">Register</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
@@ -109,6 +117,12 @@ export default function SignUpPage() {
           </Button>
         </div>
       </Form>
+      <br/>
+      <br/>
+      <Separator/>
+      <p className="text-center">Already have an account?</p>
+        <Link href={'/signin'}><Button className="w-full">Log In</Button></Link>
+        <Button onClick={handleGoogleSignIn} className="w-full"><GrGoogle /> Log In with Google</Button>
     </Card>
   );
 }
