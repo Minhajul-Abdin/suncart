@@ -2,6 +2,7 @@
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
+import { Button } from "@heroui/react";
 
 const Navbar = () => {
   return (
@@ -14,18 +15,16 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+             
+      <li><Link href={"/"}>Home</Link></li>
+      <li><Link href={"/All-Products"}>All Products</Link></li>
+      <li><Link href={"/profile"}>Profile</Link></li>
+
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <div>
+      <Image src={logo} alt="logo" width={35} height={305}/>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -34,8 +33,9 @@ const Navbar = () => {
       <li><Link href={"/profile"}>Profile</Link></li>
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end gap-2">
+    <Link href={"/signup"}><Button className="btn rounded-full">Sign Up</Button></Link>
+    <Link href={"/signin"}><Button className="btn rounded-full">Sign In</Button></Link>
   </div>
 </div>
   );

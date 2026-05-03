@@ -32,7 +32,7 @@ const Footer = () => {
                 className="dark:brightness-200"
               />
               <h2 className="text-xl font-semibold tracking-tight text-black dark:text-white">
-                pixgen
+                suncart
               </h2>
             </div>
 
@@ -111,7 +111,7 @@ const Footer = () => {
           {/* CTA Block */}
           <div className="space-y-4">
             <h3 className="text-sm font-semibold text-black dark:text-white">
-              Start creating
+              Start exploring
             </h3>
 
             <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -135,7 +135,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} pixgen. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} suncart. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <Link

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Card, Chip, Button } from "@heroui/react";
 import { FaStar } from "react-icons/fa";
 import { IoMdPricetags } from "react-icons/io";
+import Link from "next/link";
 
 
 const ProductCard = ({ product }) => {
@@ -35,7 +36,7 @@ const ProductCard = ({ product }) => {
       </div>
       </div>
 
-      <Button className="w-full">Details</Button>
+      <Link href={`/All-Products/${product.id}`}><Button className="w-full">Details</Button></Link>
     </Card>
   );
 };

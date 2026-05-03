@@ -1,5 +1,7 @@
 import React from "react";
 import ProductCard from "../ProductCard";
+import { Button } from "@heroui/react";
+import Link from "next/link";
 
 const TopProducts = async () => {
   const res = await fetch("https://suncart-7eim.vercel.app/data.json");
@@ -18,7 +20,15 @@ const TopProducts = async () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-    </div>
+      <div className="flex justify-center items-center py-15">
+        <Link href={'/All-Products'}>
+              <Button className="px-10 bg-blue-500">
+                View All Products
+              </Button>
+            </Link>
+    
+      </div>
+      </div>
   );
 };
 
