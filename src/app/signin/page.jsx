@@ -39,10 +39,10 @@ export default function SignInPage() {
     })
   }
   return (
-    <Card className="shadow rounded-2xl mx-auto py-9 mt-5">
+    <Card className="shadow rounded-2xl w-fit mx-auto py-9 mt-5">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex w-[90%] md:w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="email" type="text">
           <Label>Email</Label>
           <Input placeholder="Enter your email" />
@@ -77,7 +77,7 @@ export default function SignInPage() {
           <FieldError />
         </TextField>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid md:grid-cols-2 gap-2">
           <Button className="w-full bg-[#131D4F] font-bold text-sm text-white rounded-xl" type="submit">
             <Check />
             Submit
