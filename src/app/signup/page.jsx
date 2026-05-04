@@ -51,7 +51,7 @@ export default function SignUpPage() {
         }
   };
   return (
-    <Card className="shadow rounded-2xl mx-auto w-125 py-9 mt-5">
+    <Card className="shadow rounded-2xl mx-auto py-9 mt-5">
       <h1 className="text-center text-2xl font-bold">Register</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
