@@ -5,16 +5,16 @@ import Link from "next/link";
 import { Avatar, Button } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
 import { IoIosLogIn } from "react-icons/io";
-import { RiHome2Line } from "react-icons/ri";
-import { MdHomeFilled } from "react-icons/md";
-import { router } from "better-auth/api";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
-
+  const router = useRouter();
+ 
   const haldleLogOut = async() => {
     await authClient.signOut();
+    router.refresh();
     router.replace("/signin");
   };
   console.log(user);
