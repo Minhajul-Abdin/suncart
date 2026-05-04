@@ -1,17 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const QuicksandFont = Quicksand({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -23,11 +18,11 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       data-theme="Light"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${QuicksandFont.className} h-full antialiased`}
     >
-      <body className="">
+      <body className="bg-[#EFE4D2]">
         <Navbar />
-         <main className="container mx-auto">
+         <main className="w-[90%] md:container mx-auto">
           {children}
          </main>
         <Footer />

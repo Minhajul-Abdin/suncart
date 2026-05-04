@@ -4,6 +4,9 @@ import logo from "../../public/logo.png";
 import Link from "next/link";
 import { Avatar, Button } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
+import { IoIosLogIn } from "react-icons/io";
+import { RiHome2Line } from "react-icons/ri";
+import { MdHomeFilled } from "react-icons/md";
 
 const Navbar = () => {
   const userData = authClient.useSession();
@@ -14,7 +17,7 @@ const Navbar = () => {
   };
   console.log(user);
   return (
-<div className="navbar md:px-10 bg-base-100 shadow-sm">
+<div className="navbar md:px-10 bg-[#fff] shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,25 +30,25 @@ const Navbar = () => {
       <li><Link href={"/"}>Home</Link></li>
       <li><Link href={"/All-Products"}>All Products</Link></li>
       <li><Link href={"/profile"}>Profile</Link></li>
-
       </ul>
     </div>
-    <div>
-      <Image src={logo} alt="logo" width={35} height={305}/>
+    <div className="flex items-center md:gap-2">
+      <Image src={logo} alt="logo" width={35} height={35}/>
+      <h2 className="text-lg font-bold">SunCart</h2>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu font-semibold text-[#131D4F] menu-horizontal px-1">
       <li><Link href={"/"}>Home</Link></li>
       <li><Link href={"/All-Products"}>All Products</Link></li>
       <li><Link href={"/profile"}>Profile</Link></li>
     </ul>
   </div>
-  <div className="navbar-end gap-2">
+  <div className="navbar-end md:gap-2">
     {!user && (
       <>
-        <Link href={"/signup"}><Button className="btn rounded-full">Sign Up</Button></Link>
-        <Link href={"/signin"}><Button className="btn rounded-full">Sign In</Button></Link>
+        <Link href={"/signup"}><Button className="btn bg-[#131D4F] text-sm text-white rounded-xl">Sign Up</Button></Link>
+        <Link href={"/signin"}><Button className="btn bg-white border-[#131D4F] text-sm text-[#131D4F] font-bold rounded-xl"><IoIosLogIn /> Sign In</Button></Link>
       </>
     )}
     
@@ -55,7 +58,7 @@ const Navbar = () => {
         <Avatar.Image alt="John Doe" src={user?.image} referrerPolicy="no-referrer" />
         <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
       </Avatar>
-      <Button onClick={haldleLogOut} variant="danger" >Log Out</Button>
+      <Button onClick={haldleLogOut} className="rounded-xl border bg-white text-black" >Log Out</Button>
       </div>)
     }
     

@@ -108,11 +108,11 @@ export default function SignUpPage() {
         </TextField>
 
         <div className="grid grid-cols-2 gap-2">
-          <Button className="w-full" type="submit">
+          <Button className="w-full bg-[#131D4F] font-bold text-sm text-white rounded-xl" type="submit">
             <Check />
             Submit
           </Button>
-          <Button className="w-full" type="reset" variant="secondary">
+          <Button className="w-full text-[#131D4F] text-sm border bg-white rounded-xl" type="reset" >
             Reset
           </Button>
         </div>
@@ -120,9 +120,9 @@ export default function SignUpPage() {
       <br/>
       <br/>
       <Separator/>
-      <p className="text-center">Already have an account?</p>
-        <Link href={'/signin'}><Button className="w-full">Log In</Button></Link>
-        <Button onClick={handleGoogleSignIn} className="w-full"><GrGoogle /> Log In with Google</Button>
+      <p className="text-center text-muted">Already have an account?</p>
+        <Link href={'/signin'}><Button className="w-full bg-[#131D4F] font-bold text-sm text-white rounded-xl">Log In</Button></Link>
+        <Button onClick={handleGoogleSignIn} className="w-full bg-[#131D4F] font-bold text-sm text-white rounded-xl"><GrGoogle /> Log In with Google</Button>
     </Card>
   );
 }

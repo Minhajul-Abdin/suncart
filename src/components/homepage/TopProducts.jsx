@@ -22,7 +22,7 @@ const TopProducts = async () => {
       </div>
       <div className="flex justify-center items-center py-15">
         <Link href={'/All-Products'}>
-              <Button className="px-10 bg-blue-500">
+              <Button className="btn bg-[#131D4F] text-sm text-white rounded-xl px-10">
                 View All Products
               </Button>
             </Link>

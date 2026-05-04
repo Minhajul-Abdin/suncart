@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
       </div>
       </div>
 
-      <Link href={`/All-Products/${product.id}`}><Button className="w-full">Details</Button></Link>
+      <Link href={`/All-Products/${product.id}`}><Button className="btn w-full bg-white border-[#131D4F] text-sm text-[#131D4F] font-bold rounded-xl">Details</Button></Link>
     </Card>
   );
 };

@@ -2,6 +2,7 @@
 import { UpdateUserModal } from '@/components/updateUserModal';
 import { authClient } from '@/lib/auth-client';
 import { Avatar, Card } from '@heroui/react';
+import 'animate.css';
 import React from 'react';
 
 const ProfilePage = () => {
@@ -10,7 +11,7 @@ const ProfilePage = () => {
     const user = userData.data?.user;
 
     return (
-        <div className='my-20'>
+        <div className='my-20 animate__animated animate__fadeInDown'>
             <Card className='border max-w-96 mx-auto flex flex-col items-center'>
                 <Avatar className='w-30 h-30'>
                         <Avatar.Image alt="John Doe" src={user?.image} referrerPolicy="no-referrer" />

@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@heroui/react";
+import { BsTwitterX } from "react-icons/bs";
+import { FaInstagramSquare, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-24">
+    <footer className="relative bg-white mt-24">
       <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
       {/* Background Layer */}
@@ -18,7 +21,7 @@ const Footer = () => {
       />
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 pt-16 pb-6">
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
@@ -37,15 +40,14 @@ const Footer = () => {
             </div>
 
             <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-xs">
-              Create production-ready AI visuals in seconds. Built for speed,
-              scale, and creativity.
+              Your one-stop shop for stylish and essential summer products—designed to keep you cool, comfortable, and ready for sunny days.
             </p>
           </div>
 
           {/* Product */}
           <div>
             <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-              Product
+              Contact Us
             </h3>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
               <li>
@@ -53,7 +55,7 @@ const Footer = () => {
                   href="/generate"
                   className="hover:text-black dark:hover:text-white transition"
                 >
-                  Generate
+                  Email: suncart@gmail.com
                 </Link>
               </li>
               <li>
@@ -61,7 +63,7 @@ const Footer = () => {
                   href="/all-photos"
                   className="hover:text-black dark:hover:text-white transition"
                 >
-                  Gallery
+                  Call: +088000000
                 </Link>
               </li>
               <li>
@@ -69,7 +71,9 @@ const Footer = () => {
                   href="/pricing"
                   className="hover:text-black dark:hover:text-white transition"
                 >
-                  Pricing
+                  123 Sunshine Avenue, Suite 45<br/>
+                  Dhaka 1207<br/>  
+                  Bangladesh
                 </Link>
               </li>
             </ul>
@@ -78,34 +82,13 @@ const Footer = () => {
           {/* Company */}
           <div>
             <h3 className="text-sm font-semibold text-black dark:text-white mb-4">
-              Company
+              Socials
             </h3>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="hover:text-black dark:hover:text-white transition"
-                >
-                  Terms
-                </Link>
-              </li>
-            </ul>
+            <div className="flex gap-2">
+              <div className="p-2 text-white rounded-full bg-[#131D4F]"><BsTwitterX /></div>
+              <div className="p-2 text-white rounded-full bg-[#131D4F]"><FaLinkedinIn /></div>
+              <div className="p-2 text-white rounded-full bg-[#131D4F]"><FaInstagramSquare /></div>
+            </div>
           </div>
 
           {/* CTA Block */}
@@ -115,18 +98,10 @@ const Footer = () => {
             </h3>
 
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Generate your first AI image today.
+              Join us today and unlock exclusive deals<br/> your perfect summer starts here!
             </p>
 
-            <Link
-              href="/signup"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
-              bg-black text-white dark:bg-white dark:text-black 
-              text-sm font-medium transition-all duration-200 
-              hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10"
-            >
-              Get Started
-            </Link>
+            <Link href={"/signup"}><Button className="btn bg-[#131D4F] text-sm text-white rounded-xl">Sign Up</Button></Link>
           </div>
         </div>
 
@@ -134,7 +109,7 @@ const Footer = () => {
         <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-gray-300 to-transparent dark:via-white/10" />
 
         {/* Bottom */}
-        <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+        <div className="mt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 dark:text-gray-400">
           <p>© {new Date().getFullYear()} suncart. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
