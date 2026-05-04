@@ -16,7 +16,7 @@ const Navbar = () => {
   const haldleLogOut = async() => {
     await authClient.signOut();
     router.refresh();
-    router.push("/signin");
+    router.replace("/signin");
   };
   console.log(user);
   return (
