@@ -2,6 +2,7 @@ import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import { ToastContainer } from "react-toastify";
 
 const QuicksandFont = Quicksand({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
          <main className="w-[90%] md:container mx-auto">
           {children}
          </main>
+         <ToastContainer />
         <Footer />
       </body>
     </html>
