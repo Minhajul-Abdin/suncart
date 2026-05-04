@@ -7,6 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import { IoIosLogIn } from "react-icons/io";
 import { RiHome2Line } from "react-icons/ri";
 import { MdHomeFilled } from "react-icons/md";
+import { router } from "better-auth/api";
 
 const Navbar = () => {
   const userData = authClient.useSession();
@@ -14,6 +15,8 @@ const Navbar = () => {
 
   const haldleLogOut = async() => {
     await authClient.signOut();
+    router.refresh();
+    router.push("/signin");
   };
   console.log(user);
   return (
