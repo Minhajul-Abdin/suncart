@@ -15,6 +15,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
     const handleGoogleSignIn = async() => {
@@ -45,6 +46,9 @@ export default function SignUpPage() {
     if(!error){
         router.push("/");
     }
+    if(error){
+          toast.error("Sign Up Failed");
+        }
   };
   return (
     <Card className="shadow rounded-2xl mx-auto w-125 py-9 mt-5">
